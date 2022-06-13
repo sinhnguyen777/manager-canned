@@ -21,6 +21,9 @@ $border-outline: none;
 // size
 $light-height: 20px;
 
+// animations
+$transition: all 0.4s;
+
 // ---------- RESET CSS ----------
 
 * {
@@ -68,13 +71,15 @@ body {
     background: #ffffff;
 }
 
-.menu-top {
-    padding: 8px;
-}
+// -------------- menu --------------
 
-.logo {
-    text-align: center;
-    padding-bottom: 20px;
+.menu__top {
+    padding: 8px;
+
+    &--logo {
+        text-align: center;
+        padding-bottom: 20px;
+    }
 }
 
 .menu {
@@ -83,7 +88,7 @@ body {
     &__item {
         @include flexbox();
         padding-bottom: 8px;
-        transition: all 0.4s;
+        transition: $transition;
         cursor: pointer;
 
         &--content {
@@ -120,6 +125,55 @@ body {
     padding: 8px;
 }
 
+// -------------- sub menu --------------
+
+.sub-menu {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub {
+    &__title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #E9E9EC;
+    }
+
+    &__list {
+        padding: 32px 16px 0 16px;
+
+        &--item {
+            padding: 10px 16px;
+            margin-bottom: 8px;
+            @include fontStyle();
+            color: $color-sub-menu;
+            transition: $transition;
+            cursor: pointer;
+
+            &:hover {
+                background: #E9E9EC;
+                border-radius: 4px;
+            }
+
+            &:hover .text__sub--description {
+                font-weight: 700;
+                color: $main-color;
+            }
+        }
+    }
+}
+
+// -------------- main content --------------
+
+.main-content {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px 0px 0px 8px;
+}
+
 .text {
     &--link {
         line-height: 16px;
@@ -128,7 +182,27 @@ body {
         font-style: $font-style;
         font-weight: $font-weight;
         color: $color-text-menu;
-        transition: all 0.4s;
+        transition: $transition;
+    }
+
+    &__sub {
+        &--title {
+            padding: 16px;
+            margin: 0;
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: $font-size;
+            font-style: $font-style;
+            line-height: 20px;
+            color: #828292;
+        }
+
+        &--description {
+            @include fontStyle();
+            color: $color-sub-menu;
+            transition: $transition;
+            transition-duration: initial;
+        }
     }
 }
 
