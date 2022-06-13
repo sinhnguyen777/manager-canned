@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  text-rendering: optimizeSpeed;
+  font-family: "Roboto", sans-serif;
+  background: #F6F6F8;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.main-menu {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+}
+
+.menu-top {
+  padding: 8px;
+}
+
+.logo {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.menu {
+  list-style: none;
+}
+.menu__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.menu__item--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0 10px 0;
+}
+.menu__item.--profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.menu__item:hover {
+  background: #F6F6F8;
+  border-radius: 8px;
+}
+.menu__item:hover .text--link {
+  color: #3E6DDA;
+  font-weight: 700;
+}
+.menu__item:hover .icon--menu-item {
+  color: #3E6DDA;
+}
+
+.profile-and-notifications {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.text--link {
+  line-height: 16px;
+  text-decoration: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  color: #9B9BA8;
+  transition: all 0.4s;
+}
+
+.icon--logo {
+  padding: 4px 22px;
+}
+.icon--menu-item {
+  padding-bottom: 6px;
+  color: #9B9BA8;
+}
+.icon--profile {
+  padding: 14px 18px;
+}
+
+/*# sourceMappingURL=style.css.map */
