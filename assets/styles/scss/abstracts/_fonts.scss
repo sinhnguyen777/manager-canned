@@ -1,2 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('../../../fonts/Gibson-Regular/Gibson-Regular.ttf');
+
+@font-face {
+    font-family: 'Gibson';
+    src: url('../../fonts/Gibson-Regular/Gibson-Regular.ttf'), url('../../fonts/Gibson-Bold/Gibson-Bold.ttf');
+}

@@ -1,0 +1,137 @@
+.form {
+    padding: 32px 40px 20px 40px;
+
+    &__search {
+        display: flex;
+        // justify-content: space-between;
+    }
+
+    &__create {
+        width: 600px;
+        padding: 0 261px 80px 261px;
+
+        &--item {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 12px;
+        }
+
+        &--list {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+        }
+    }
+
+    &__control {
+        &--search {
+            padding: 0 12px;
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            background: #FFFFFF;
+            border: 1px solid #B4B4BE;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        &--select {
+            width: 160px;
+            height: 36px;
+            margin: 0 8px;
+        }
+
+
+    }
+
+}
+
+.input {
+    outline: none;
+
+    &--search {
+        width: 100%;
+        padding: 8px 0;
+        border: 0;
+
+        &::placeholder {
+            @include fontStyle();
+            color: #6B6B7B;
+            display: flex;
+            align-items: center;
+            flex: none;
+            order: 1;
+            flex-grow: 1;
+            line-height: 10;
+        }
+    }
+
+    &__table--check {
+        text-align: center;
+    }
+
+    &--create {
+        background: #FFFFFF;
+        border: 1px solid #B4B4BE;
+        border-radius: 4px;
+        padding: 8px 12px;
+
+        &::placeholder {
+            @include fontStyle();
+            color: #6B6B7B;
+        }
+    }
+
+    &--textarea {
+        height: 176px;
+        padding: 8px 12px;
+        border: 1px solid #B4B4BE;
+        border-radius: 4px;
+
+        &::placeholder {
+            @include fontStyle();
+            color: #6B6B7B;
+        }
+    }
+
+    &--radio {
+        margin-right: 6px;
+    }
+}
+
+.select {
+    &__search {
+        width: 160px;
+        height: 36px;
+        padding: 8px 12px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        outline: none;
+        background: #FFFFFF;
+        border: 1px solid #B4B4BE;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    &__create {
+        width: 100%;
+        padding: 8px 12px;
+        background: #FFFFFF;
+        border: 1px solid #B4B4BE;
+        border-radius: 4px;
+    }
+}
+
+.lable {
+    &--item {
+        @include fontStyle();
+        padding-bottom: 4px;
+        color: $color-black;
+        font-weight: 510;
+    }
+
+    &--create-list {
+        @include fontStyle();
+    }
+}

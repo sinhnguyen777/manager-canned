@@ -207,6 +207,107 @@ body {
   margin: 0 8px;
 }
 
+.input {
+  outline: none;
+}
+.input--search {
+  width: 100%;
+  padding: 8px 0;
+  border: 0;
+}
+.input--search::placeholder {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  color: #6B6B7B;
+  display: flex;
+  align-items: center;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  line-height: 10;
+}
+.input__table--check {
+  text-align: center;
+}
+.input--create {
+  background: #FFFFFF;
+  border: 1px solid #B4B4BE;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+.input--create::placeholder {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  color: #6B6B7B;
+}
+.input--textarea {
+  height: 176px;
+  padding: 8px 12px;
+  border: 1px solid #B4B4BE;
+  border-radius: 4px;
+}
+.input--textarea::placeholder {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  color: #6B6B7B;
+}
+.input--radio {
+  margin-right: 6px;
+}
+
+.select__search {
+  width: 160px;
+  height: 36px;
+  padding: 8px 12px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  outline: none;
+  background: #FFFFFF;
+  border: 1px solid #B4B4BE;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.select__create {
+  width: 100%;
+  padding: 8px 12px;
+  background: #FFFFFF;
+  border: 1px solid #B4B4BE;
+  border-radius: 4px;
+}
+
+.lable--item {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  padding-bottom: 4px;
+  color: #141417;
+  font-weight: 510;
+}
+.lable--create-list {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+}
+
 table {
   border-collapse: separate;
   border-spacing: 0;
@@ -507,107 +608,6 @@ table .update__content {
   background: #E9E9EC;
   font-weight: 510;
   color: #141417;
-}
-
-.input {
-  outline: none;
-}
-.input--search {
-  width: 100%;
-  padding: 8px 0;
-  border: 0;
-}
-.input--search::placeholder {
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  line-height: 20px;
-  color: #6B6B7B;
-  display: flex;
-  align-items: center;
-  flex: none;
-  order: 1;
-  flex-grow: 1;
-  line-height: 10;
-}
-.input__table--check {
-  text-align: center;
-}
-.input--create {
-  background: #FFFFFF;
-  border: 1px solid #B4B4BE;
-  border-radius: 4px;
-  padding: 8px 12px;
-}
-.input--create::placeholder {
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  line-height: 20px;
-  color: #6B6B7B;
-}
-.input--textarea {
-  height: 176px;
-  padding: 8px 12px;
-  border: 1px solid #B4B4BE;
-  border-radius: 4px;
-}
-.input--textarea::placeholder {
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  line-height: 20px;
-  color: #6B6B7B;
-}
-.input--radio {
-  margin-right: 6px;
-}
-
-.select__search {
-  width: 160px;
-  height: 36px;
-  padding: 8px 12px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  outline: none;
-  background: #FFFFFF;
-  border: 1px solid #B4B4BE;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.select__create {
-  width: 100%;
-  padding: 8px 12px;
-  background: #FFFFFF;
-  border: 1px solid #B4B4BE;
-  border-radius: 4px;
-}
-
-.lable--item {
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  line-height: 20px;
-  padding-bottom: 4px;
-  color: #141417;
-  font-weight: 510;
-}
-.lable--create-list {
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  line-height: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

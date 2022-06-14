@@ -1,0 +1,40 @@
+// -------------- sub menu --------------
+
+.sub-menu {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sub {
+    &__title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #E9E9EC;
+    }
+
+    &__list {
+        padding: 32px 16px 0 16px;
+
+        &--item {
+            padding: 10px 16px;
+            margin-bottom: 8px;
+            @include fontStyle();
+            color: $color-sub-menu;
+            transition: $transition;
+            cursor: pointer;
+
+            &:hover {
+                background: #E9E9EC;
+                border-radius: 4px;
+            }
+
+            &:hover .text__sub--description {
+                font-weight: 700;
+                color: $main-color;
+            }
+        }
+    }
+}

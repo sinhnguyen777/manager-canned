@@ -1,0 +1,52 @@
+.text {
+    &--link {
+        line-height: 16px;
+        text-decoration: none;
+        font-size: 12px;
+        font-style: $font-style;
+        font-weight: $font-weight;
+        color: $color-text-menu;
+        transition: $transition;
+    }
+
+    &__sub {
+        &--title {
+            padding: 16px;
+            margin: 0;
+            font-family: $font-family;
+            font-weight: 700;
+            font-size: $font-size;
+            font-style: $font-style;
+            line-height: 20px;
+            color: #828292;
+        }
+
+        &--description {
+            @include fontStyle();
+            color: $color-sub-menu;
+            transition: $transition;
+        }
+    }
+
+    &--title {
+        font-family: 'Gibson';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: $color-black;
+    }
+
+    &--status {
+        @include fontStyle();
+        font-weight: 500;
+        color: $color-black;
+        padding-right: 20px;
+    }
+
+    &--action {
+        @include fontStyle();
+        font-weight: 500;
+        color: #EC2B08;
+    }
+}
