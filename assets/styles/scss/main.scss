@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Gibson';
-    src: url('../../fonts/Gibson-Regular/Gibson-Regular.ttf');
+    src: url('../../fonts/Gibson-Regular/Gibson-Regular.ttf'), url('../../fonts/Gibson-Bold/Gibson-Bold.ttf');
 }
 
 // ---------- VARIABLE ----------
@@ -67,6 +67,12 @@ body {
 
 .wrapper {
     width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    height: auto;
     display: flex;
 }
 
@@ -77,11 +83,19 @@ body {
 }
 
 .main-menu {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background: #ffffff;
+
+    &__create-response {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #ffffff;
+    }
 }
 
 .menu__top {
@@ -180,14 +194,24 @@ body {
 // -------------- main content --------------
 
 .content {
+    // min-height: max-content;
+    height: 100vh;
     position: relative;
-    width: 100%;
+    flex-grow: 1;
+    height: auto;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px 0px 0px 8px;
 
     &__title {
+        display: flex;
+        justify-content: space-between;
         padding: 24px 40px;
+
+        &--right {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__search {
@@ -201,6 +225,12 @@ body {
     &__table {
         padding: 10px 40px;
     }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        padding-top: 24px;
+    }
 }
 
 .form {
@@ -209,6 +239,23 @@ body {
     &__search {
         display: flex;
         // justify-content: space-between;
+    }
+
+    &__create {
+        width: 600px;
+        padding: 0 261px 80px 261px;
+
+        &--item {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 12px;
+        }
+
+        &--list {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+        }
     }
 
     &__control {
@@ -466,19 +513,38 @@ table {
     }
 
     &--create {
-        display: flex;
-        align-items: center;
-        flex: none;
-        order: 2;
-        flex-grow: 0;
-        padding: 8px 16px 8px 12px;
-        @include fontStyle();
-        font-weight: 500;
-        border: none;
-        background: #3E6DDA;
-        border-radius: 4px;
-        color: #FFFFFF;
-        text-align: right;
+
+        &-search {
+            display: flex;
+            align-items: center;
+            flex: none;
+            order: 2;
+            flex-grow: 0;
+            padding: 8px 16px 8px 12px;
+            @include fontStyle();
+            font-weight: 500;
+            border: none;
+            background: #3E6DDA;
+            border-radius: 4px;
+            color: #FFFFFF;
+            text-align: right;
+        }
+
+        &-response {
+            display: flex;
+            align-items: center;
+            flex: none;
+            order: 2;
+            flex-grow: 0;
+            padding: 8px 16px;
+            @include fontStyle();
+            font-weight: 500;
+            border: none;
+            background: #3E6DDA;
+            border-radius: 4px;
+            color: #FFFFFF;
+            margin-left: 4px;
+        }
 
     }
 
@@ -498,6 +564,34 @@ table {
         border: none;
         cursor: pointer;
     }
+
+    &--cancel {
+        padding: 8px 16px;
+        background: #E9E9EC;
+        border-radius: 4px;
+        border: none;
+
+        @include fontStyle();
+
+        font-weight: 510;
+        margin-right: 4px;
+    }
+
+    &--add-tag {
+        @include fontStyle();
+
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        padding: 6px 12px 6px 8px;
+        border: none;
+        border-radius: 4px;
+        background: #E9E9EC;
+        font-weight: 510;
+        color: #141417;
+
+    }
+
 }
 
 .input {
@@ -523,6 +617,34 @@ table {
     &__table--check {
         text-align: center;
     }
+
+    &--create {
+        background: #FFFFFF;
+        border: 1px solid #B4B4BE;
+        border-radius: 4px;
+        padding: 8px 12px;
+
+        &::placeholder {
+            @include fontStyle();
+            color: #6B6B7B;
+        }
+    }
+
+    &--textarea {
+        height: 176px;
+        padding: 8px 12px;
+        border: 1px solid #B4B4BE;
+        border-radius: 4px;
+
+        &::placeholder {
+            @include fontStyle();
+            color: #6B6B7B;
+        }
+    }
+
+    &--radio {
+        margin-right: 6px;
+    }
 }
 
 .select {
@@ -538,5 +660,26 @@ table {
         border: 1px solid #B4B4BE;
         border-radius: 4px;
         cursor: pointer;
+    }
+
+    &__create {
+        width: 100%;
+        padding: 8px 12px;
+        background: #FFFFFF;
+        border: 1px solid #B4B4BE;
+        border-radius: 4px;
+    }
+}
+
+.lable {
+    &--item {
+        @include fontStyle();
+        padding-bottom: 4px;
+        color: $color-black;
+        font-weight: 510;
+    }
+
+    &--create-list {
+        @include fontStyle();
     }
 }
